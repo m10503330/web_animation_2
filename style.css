@@ -1,0 +1,574 @@
+body, html {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.warp .window, .warp .window:before, .warp .window [class^=door], .warp .window [class^=door]:after, .warp .window [class^=door]:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #9D9D9D;
+  width: 100%;
+  height: 100%;
+}
+
+.warp {
+  background-color: #fff;
+  width: 800px;
+  height: 800px;
+  border-radius: 6px;
+  position: relative;
+  overflow: hidden;
+}
+
+.warp .flip {
+  right: 0;
+  margin: 50px;
+}
+
+.warp .spring {
+  left: 0px;
+  margin: 50px;
+}
+
+.warp .spring_front {
+  background-image: url(./image/flower.png);
+  background-size: cover;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.warp .spring_back {
+  background-color: #FF95CA;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.warp .summer {
+  left: 150px;
+  margin: 50px;
+}
+
+.warp .summer_front {
+  background-image: url(./image/leaf.png);
+  background-size: cover;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.warp .summer_back {
+  background-color: #FFD306;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.warp .autumn {
+  left: 300px;
+  margin: 50px;
+}
+
+.warp .autumn_front {
+  background-image: url(./image/Maple.png);
+  background-size: cover;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.warp .autumn_back {
+  background-color: #FF5809;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.warp .winter {
+  left: 450px;
+  margin: 50px;
+}
+
+.warp .winter_front {
+  background-image: url(./image/snowflake.png);
+  background-size: cover;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.warp .winter_back {
+  background-color: #84C1FF;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.warp .flip, .warp .spring, .warp .summer, .warp .autumn, .warp .winter {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  -webkit-perspective: 300px;
+          perspective: 300px;
+}
+
+.warp .flip > div, .warp .spring > div, .warp .summer > div, .warp .autumn > div, .warp .winter > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transition: .5s;
+  transition: .5s;
+  line-height: 100px;
+  text-align: center;
+  font-size: 36px;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  border-radius: 20%;
+}
+
+.warp .front {
+  background-color: #1D2B49;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.warp .back {
+  background-color: #91CDFF;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.warp .window {
+  -webkit-transform: scale(1.3);
+          transform: scale(1.3);
+  width: 300px;
+  height: 400px;
+  top: 35%;
+  left: 32%;
+  border-radius: 50% 50% 0 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1D2B49), color-stop(#1A45A0), color-stop(#91CDFF), to(#FFF));
+  background: linear-gradient(#1D2B49, #1A45A0, #91CDFF, #FFF);
+  background-size: 100% 200%;
+  border: 4px solid #A23400;
+  -webkit-perspective: 800px;
+          perspective: 800px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.warp .window:before {
+  content: "";
+  width: 320px;
+  height: 20px;
+  top: 100%;
+  left: -12px;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  background-color: #A23400;
+}
+
+.warp .window [class^=door] {
+  width: 150px;
+  height: 400px;
+  -webkit-transform: translate(0, 0);
+          transform: translate(0, 0);
+  overflow: hidden;
+  border: 10px solid #A23400;
+}
+
+.warp .window [class^=door]:after {
+  content: "";
+  width: 150px;
+  height: 8px;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  background-color: #A23400;
+}
+
+.warp .window [class^=door]:before {
+  content: "";
+  width: 8px;
+  height: 400px;
+  bottom: 0%;
+  left: 50%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+  background-color: #A23400;
+}
+
+.warp .window .door1 {
+  z-index: 3;
+  left: -50%;
+  border-radius: 0 150px 0 0;
+  -webkit-box-shadow: inset 0px 0px 10px;
+          box-shadow: inset 0px 0px 10px;
+  -webkit-transform-origin: 98% 50%;
+          transform-origin: 98% 50%;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.warp .window .door2 {
+  z-index: 3;
+  left: 100%;
+  border-radius: 150px 0 0 0;
+  -webkit-box-shadow: inset 0px 0px 10px;
+          box-shadow: inset 0px 0px 10px;
+  -webkit-transform-origin: 1% 50%;
+          transform-origin: 1% 50%;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.warp .window:hover .door1 {
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+}
+
+.warp .window:hover .door2 {
+  -webkit-transition: all 2s;
+  transition: all 2s;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+}
+
+.warp .window .alldrop {
+  border-radius: 50% 50% 0 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+@-webkit-keyframes falling {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+  0% {
+    -webkit-transform: translate(100px, 0) rotate(0deg);
+            transform: translate(100px, 0) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(0px, 200px) rotate(90deg);
+            transform: translate(0px, 200px) rotate(90deg);
+  }
+}
+
+@keyframes falling {
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+  0% {
+    -webkit-transform: translate(100px, 0) rotate(0deg);
+            transform: translate(100px, 0) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: translate(0px, 200px) rotate(90deg);
+            transform: translate(0px, 200px) rotate(90deg);
+  }
+}
+
+.warp .window .alldrop [class^=drop] {
+  background-image: url(./image/leaf.png);
+  background-size: cover;
+  border-radius: 50%;
+  -webkit-animation: falling 2s infinite;
+          animation: falling 2s infinite;
+}
+
+.warp .window .alldrop .drop1 {
+  position: absolute;
+  top: -7.75312%;
+  left: 12.33692%;
+  -webkit-animation-delay: -0.1s;
+          animation-delay: -0.1s;
+  width: 30.75793px;
+  height: 30.75793px;
+}
+
+.warp .window .alldrop .drop2 {
+  position: absolute;
+  top: 6.49078%;
+  left: 93.45107%;
+  -webkit-animation-delay: -0.2s;
+          animation-delay: -0.2s;
+  width: 23.57075px;
+  height: 23.57075px;
+}
+
+.warp .window .alldrop .drop3 {
+  position: absolute;
+  top: 24.42757%;
+  left: 81.59995%;
+  -webkit-animation-delay: -0.3s;
+          animation-delay: -0.3s;
+  width: 22.42561px;
+  height: 22.42561px;
+}
+
+.warp .window .alldrop .drop4 {
+  position: absolute;
+  top: -5.02917%;
+  left: 52.28938%;
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+  width: 38.38233px;
+  height: 38.38233px;
+}
+
+.warp .window .alldrop .drop5 {
+  position: absolute;
+  top: 25.11049%;
+  left: 9.93477%;
+  -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s;
+  width: 29.60701px;
+  height: 29.60701px;
+}
+
+.warp .window .alldrop .drop6 {
+  position: absolute;
+  top: 1.08105%;
+  left: 7.13132%;
+  -webkit-animation-delay: -0.6s;
+          animation-delay: -0.6s;
+  width: 18.66336px;
+  height: 18.66336px;
+}
+
+.warp .window .alldrop .drop7 {
+  position: absolute;
+  top: 16.1527%;
+  left: 74.96123%;
+  -webkit-animation-delay: -0.7s;
+          animation-delay: -0.7s;
+  width: 35.52823px;
+  height: 35.52823px;
+}
+
+.warp .window .alldrop .drop8 {
+  position: absolute;
+  top: 20.25494%;
+  left: 79.485%;
+  -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s;
+  width: 35.71214px;
+  height: 35.71214px;
+}
+
+.warp .window .alldrop .drop9 {
+  position: absolute;
+  top: 15.28807%;
+  left: 82.73037%;
+  -webkit-animation-delay: -0.9s;
+          animation-delay: -0.9s;
+  width: 22.96937px;
+  height: 22.96937px;
+}
+
+.warp .window .alldrop .drop10 {
+  position: absolute;
+  top: 43.81076%;
+  left: 50.56066%;
+  -webkit-animation-delay: -1s;
+          animation-delay: -1s;
+  width: 22.07481px;
+  height: 22.07481px;
+}
+
+.warp .window .alldrop .drop11 {
+  position: absolute;
+  top: 46.57576%;
+  left: 49.9895%;
+  -webkit-animation-delay: -1.1s;
+          animation-delay: -1.1s;
+  width: 38.46178px;
+  height: 38.46178px;
+}
+
+.warp .window .alldrop .drop12 {
+  position: absolute;
+  top: -27.56552%;
+  left: 23.80473%;
+  -webkit-animation-delay: -1.2s;
+          animation-delay: -1.2s;
+  width: 31.76185px;
+  height: 31.76185px;
+}
+
+.warp .window .alldrop .drop13 {
+  position: absolute;
+  top: -0.93994%;
+  left: 77.45163%;
+  -webkit-animation-delay: -1.3s;
+          animation-delay: -1.3s;
+  width: 32.92218px;
+  height: 32.92218px;
+}
+
+.warp .window .alldrop .drop14 {
+  position: absolute;
+  top: -22.21191%;
+  left: 92.62841%;
+  -webkit-animation-delay: -1.4s;
+          animation-delay: -1.4s;
+  width: 27.50477px;
+  height: 27.50477px;
+}
+
+.warp .window .alldrop .drop15 {
+  position: absolute;
+  top: 27.48249%;
+  left: 61.20723%;
+  -webkit-animation-delay: -1.5s;
+          animation-delay: -1.5s;
+  width: 34.70202px;
+  height: 34.70202px;
+}
+
+.warp .window .sun, .warp .window .moon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+  position: absolute;
+  top: 50px;
+  left: 100px;
+}
+
+.warp .window .sun {
+  background-color: #FFDD38;
+  -webkit-box-shadow: 0px 0px 20px rgba(255, 221, 56, 0.5);
+          box-shadow: 0px 0px 20px rgba(255, 221, 56, 0.5);
+  top: 400px;
+  opacity: 0;
+}
+
+.warp .window .moon {
+  -webkit-box-shadow: inset 10px -10px rgba(255, 255, 255, 0.9);
+          box-shadow: inset 10px -10px rgba(255, 255, 255, 0.9);
+}
+
+.warp #flip_checkbox, .warp input[type="radio"] {
+  display: none;
+}
+
+.warp #flip_checkbox:checked ~ .window {
+  background-position: 0 100%;
+}
+
+.warp #flip_checkbox:checked ~ .window .sun {
+  top: 50px;
+  opacity: 1;
+}
+
+.warp #flip_checkbox:checked ~ .window .moon {
+  top: -10px;
+  opacity: 0;
+}
+
+.warp #flip_checkbox:checked + .flip > .front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.warp #flip_checkbox:checked + .flip > .back {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+.warp #spring:checked + .spring > .spring_front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.warp #spring:checked + .spring > .spring_back {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+.warp #summer:checked + .summer > .summer_front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.warp #summer:checked + .summer > .summer_back {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+.warp #autumn:checked + .autumn > .autumn_front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.warp #autumn:checked + .autumn > .autumn_back {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+.warp #winter:checked + .winter > .winter_front {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.warp #winter:checked + .winter > .winter_back {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+
+.warp #spring:checked ~ .window [class^=drop] {
+  background-image: url(./image/flower.png);
+}
+
+.warp #summer:checked ~ .window [class^=drop] {
+  background-image: url(./image/leaf.png);
+}
+
+.warp #autumn:checked ~ .window [class^=drop] {
+  background-image: url(./image/Maple.png);
+}
+
+.warp #winter:checked ~ .window [class^=drop] {
+  background-image: url(./image/snowflake.png);
+}
+/*# sourceMappingURL=style.css.map */
